@@ -1,0 +1,147 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{problem}{Problem}
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{example}{Example}[section]
+%\newtheorem{definition}[problem]{Definition}
+\begin{document}
+
+%\textbf{\Large 12.319} \\
+%\textbf{\large AI252BTECH11033} \\
+\title{12.319}
+\author{AI25BTECH11033 - Spoorthi N}
+% \maketitle
+% \newpage
+% \bigskip
+%\begin{document}
+{\let\newpage\relax\maketitle}
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}:
+
+Let $M$ be the real vector space of $2 \times 3$ matrices with real entries.  
+Let $T : M \to M$ be defined by
+\begin{align}
+T\!\left( 
+\begin{bmatrix}
+x_{1} & x_{2} & x_{3} \\
+x_{4} & x_{5} & x_{6}
+\end{bmatrix}
+\right)
+=
+\begin{pmatrix}
+-x_{6} & x_{4} & x_{1} \\
+x_{3} & x_{5} & x_{2}
+\end{pmatrix}.
+\end{align}
+
+The determinant of $T$ is \_\_\_\_ \hfill (MA 2013)
+
+\textbf{Solution}:
+
+We are given the transformation
+\begin{align}
+T\!\left(
+\begin{pmatrix}
+x & y & z \\
+u & v & w
+\end{pmatrix}
+\right)
+=
+\begin{pmatrix}
+-w & u & x \\
+z & v & y
+\end{pmatrix}.
+\end{align}
+
+Represent input as a vector;
+
+\begin{align}
+\begin{pmatrix}
+x & y & z \\
+u & v & w
+\end{pmatrix}
+\quad \longleftrightarrow \quad
+\begin{bmatrix}
+x \\ y \\ z \\ u \\ v \\ w
+\end{bmatrix}.
+\end{align}
+
+Transformation on the vector;
+
+\begin{align}
+T\!\left(
+\begin{pmatrix}
+x \\ y \\ z \\ u \\ v \\ w
+\end{pmatrix}
+\right)
+=
+\begin{pmatrix}
+-w \\ u \\ x \\ z \\ v \\ y
+\end{pmatrix}.
+\end{align}
+
+Matrix of transformation;
+
+\begin{align}
+A =
+\begin{pmatrix}
+0 & 0 & 0 & 0 & 0 & -1 \\
+0 & 0 & 0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0
+\end{pmatrix}.
+\end{align}
+
+Determinant:
+
+\begin{align}
+\det(A) = (-1)\times(-1) = 1.
+\end{align}
+
+\begin{align}
+{\det(T) = 1}
+\end{align}
+
+\end{document}
