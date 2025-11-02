@@ -1,0 +1,99 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{caption}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}     
+\usepackage{xparse}
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{problem}{Problem}
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{example}{Example}[section]
+%\newtheorem{definition}[problem]{Definition}
+
+\begin{document}
+
+\title{2.8.7}
+\author{AI25BTECH11033 - SPOORTHI N}
+% \maketitle
+% \newpage
+% \bigskip
+%\begin{document}
+{\let\newpage\relax\maketitle}
+%\renewcommand{\thefigure}{\theenumi}
+%\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}:\\
+
+\noindent Find $\overrightarrow|{\vec{a}}$ . $\overrightarrow{\vec{b}|}$ , if two vectors 
+$\overrightarrow{\vec{a}}$ and $\overrightarrow{\vec{b}}$ are such that $\overrightarrow|{\vec{a}|}$ =2, $\overrightarrow|{\vec{b}|}$ =3 and $\overrightarrow{\vec{a}}$. 
+$\overrightarrow{\vec{b}}$=4 
+
+\textbf{solution}:\\
+
+
+Angle between vectors ;
+
+\begin{align}
+ |\vec{a}| &= 2 \\
+|\vec{b}| &= 3 \\
+\vec{a} \cdot \vec{b} &= 4
+\end{align}
+
+Matrix interpretation of dot product;
+
+\begin{align}
+    \overrightarrow{\vec{a}}. \overrightarrow{\vec{b}} = \overrightarrow{{a^T}} . \overrightarrow{{b}} 
+\end{align}
+And the cosine of the angle $\theta$ btween $\overrightarrow{\vec{a}}$ and $\overrightarrow{\vec{b}}$ is:
+
+\begin{align}
+   \cos \theta=\frac{a^T b}{\|\vec{a}\|\|\vec{b}\|}
+\end{align}
+
+Compute $\cos \theta$
+
+\begin{align}
+       \cos \theta=\frac{4}{2.3}=\frac{2}{3}
+\end{align}
+
+Angle ;
+
+\begin{align}
+\theta=\frac{2}{3}
+\end{align}
+
+\end{document}
+

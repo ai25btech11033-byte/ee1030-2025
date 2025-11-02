@@ -1,0 +1,41 @@
+/* =========================
+   C PROGRAM
+   ========================= */
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a = 2.0;   // |a|
+    double b = 3.0;   // |b|
+    double dot = 4.0; // a · b
+
+    double cos_theta = dot / (a * b);
+    double theta_rad = acos(cos_theta);
+    double theta_deg = theta_rad * (180.0 / M_PI);
+
+    printf("C Program Output:\n");
+    printf("cos(theta) = %.2f\n", cos_theta);
+    printf("theta (radians) = %.4f\n", theta_rad);
+    printf("theta (degrees) = %.2f\n", theta_deg);
+
+    return 0;
+}
+
+/* =========================
+   PYTHON PROGRAM
+   =========================
+import math
+
+a = 2.0   # |a|
+b = 3.0   # |b|
+dot = 4.0 # a · b
+
+cos_theta = dot / (a * b)
+theta_rad = math.acos(cos_theta)
+theta_deg = math.degrees(theta_rad)
+
+print("Python Program Output:")
+print(f"cos(theta) = {cos_theta:.2f}")
+print(f"theta (radians) = {theta_rad:.4f}")
+print(f"theta (degrees) = {theta_deg:.2f}")
+*/

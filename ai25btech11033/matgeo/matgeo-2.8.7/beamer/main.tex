@@ -1,0 +1,162 @@
+
+\documentclass{beamer}
+\mode<presentation>
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{advdate}
+\usepackage{graphicx}
+\graphicspath{{./figs/}}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usetheme{Boadilla}
+\usecolortheme{lily}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,right]{author in head/foot}%
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\setbeamertemplate{navigation symbols}{}
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}[1]{\overset{\mathcal{#1}}{ \longleftrightarrow}}
+%\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\numberwithin{equation}{section}
+\title{1.8.9}
+\author{AI25BTECH11033 - Spoorthi N}
+% \maketitle
+% \newpage
+% \bigskip
+\begin{document}
+{\let\newpage\relax\maketitle}
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\textbf{Question}
+
+\noindent Find the area of the triangle with vertices $\Vec{A}(-1 , 0 , -2)$ , $\Vec{B}(0 , 2 , 1)$ and $\Vec{C}(-1 , 4 , 1)$. \,\,\,\,\, (12, 2023)
+
+
+\textbf{solution}:\\
+
+
+We are asked to find the area of the triangle with vertices:
+\begin{align} 
+\Vec{A}(-1 , 0 ,-2) \,\,\,\,  \Vec{B}(0,2,1) \,\,\,\, \Vec{C}(-1,4,1)
+\end{align}
+
+From the vectors;
+
+\begin{align}
+\overrightarrow{\vec{AB}}= \vec{B} - \vec{A} = (0-(-1), 2-0,1-(-2))=(1 , 2, 3)
+\end{align}
+
+
+\begin{align}
+\overrightarrow{\vec{AC}}= \vec{C} - \vec{A}=(-1-(-1),,4-0,,1-(-2))=(0 , 4 , 3)
+\end{align}
+
+\begin{align}
+\overrightarrow{\Vec{AB}}=(-1, 2 ,3) 
+\end{align}
+
+\begin{align}
+\overrightarrow{\Vec{AC}}=(0,4,3) 
+\end{align}
+
+Write cross producet in matrix form:
+
+\begin{align}
+\vec{AB} \times \vec{AC} =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+1 & 2 & 3 \\
+0 & 4 & 3
+\end{vmatrix}
+\end{align}
+
+Expand the determinant;
+\begin{align}
+= i(2 \cdot 3 - 3 \cdot 4) - j(1 \cdot 3 - 3 \cdot 0) + k(1 \cdot 4 - 2 \cdot 0)
+\end{align}
+
+\begin{align}
+= i(6 - 12) - j(3 - 0) + k(4 - 0)
+\end{align}
+
+\begin{align}
+= -6i - 3j + 4k
+\end{align}
+\begin{align}
+\vec{AB} \times \vec{AC} = (-6, -3, 4)
+\end{align}
+
+Magnitude of cross product;
+\begin{align}
+|\vec{AB} \times \vec{AC}| = \sqrt{(-6)^2 + (-3)^2 + 4^2} 
+= \sqrt{36 + 9 + 16} 
+= \sqrt{61}
+\end{align}
+
+Area of the triangle;
+\begin{align}
+\text{Area} = \tfrac{1}{2} |\vec{AB} \times \vec{AC}|
+= \tfrac{1}{2} \sqrt{61}
+\end{align}
+Area of the triangle
+
+\begin{align}
+\text{Area} = \tfrac{1}{2} \left| \vec{AB} \times \vec{AC} \right|
+= \tfrac{1}{2} \sqrt{61}
+\end{align}
+
+\begin{align}
+\frac{\sqrt{61}}{2} \approx 3.91
+\end{align}
+
+\end{document}
